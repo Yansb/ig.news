@@ -42,14 +42,12 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const { type } = event;
-    console.log(type)
 
     if(relevantEvents.has(type)){
       try{
         switch(type){
           case 'customer.subscription.updated':
           case 'customer.subscription.deleted':
-            console.log('to entrando aqui pelo amor de deus?')
             const subscription = event.data.object as Stripe.Subscription;
 
             await saveSubscription(
