@@ -9,7 +9,7 @@ const posts = [
   {slug: 'my-new-post', title: 'My New Post', excerpt: 'Post excerpt', updatedAt: '10 de abril'}
 ]
 
-describe('Home page',  () => {
+describe('Posts page',  () => {
   it('renders correctly', () => {
     render(<Posts posts={posts} />)
     
